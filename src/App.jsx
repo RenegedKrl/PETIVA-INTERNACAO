@@ -282,7 +282,7 @@ function App() {
           <RevealOnScroll>
             <div style={{ textAlign: 'center', marginTop: '40px' }}>
               <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '16px 32px', fontSize: '1.1rem' }}>
-                <WhatsAppIcon size={20} color="#fff" /> Fale com a gente agora mesmo
+                <WhatsAppIcon size={20} color="#fff" /> Fale conosco
               </a>
             </div>
           </RevealOnScroll>
