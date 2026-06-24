@@ -1,4 +1,11 @@
 /* App.css */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 102;
+  width: 100%;
+}
+
 .top-banner {
   background-color: var(--bg-dark);
   color: white;
@@ -10,7 +17,6 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  z-index: 102;
 }
 
 .pulse-dot {
@@ -63,8 +69,6 @@
 }
 
 nav {
-  position: sticky;
-  top: 0;
   width: 100%;
   z-index: 100;
   background: rgba(255, 255, 255, 0.95) !important;
@@ -528,12 +532,31 @@ nav {
 /* Testimonials */
 .testimonials {
   background: var(--bg-light);
+  overflow: hidden;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.testimonials-slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+}
+
+.testimonials-track {
+  display: flex;
   gap: 30px;
+  width: max-content;
+  animation: scroll-testimonials 40s linear infinite;
+}
+
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-testimonials {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 15px)); }
 }
 
 .testimonial-card {
@@ -542,6 +565,8 @@ nav {
   border-radius: 16px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.03);
   position: relative;
+  width: 400px;
+  flex-shrink: 0;
 }
 
 .testimonial-card::before {
@@ -920,19 +945,8 @@ nav {
   .floating-whatsapp { display: none; }
   .app { padding-bottom: 80px; }
   
-  .testimonials-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 24px;
-    gap: 16px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .testimonials-grid::-webkit-scrollbar { display: none; }
   .testimonial-card {
-    min-width: 85vw;
-    scroll-snap-align: center;
+    width: 300px;
   }
   
   .process-steps::before { left: 20px; }

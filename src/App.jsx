@@ -38,9 +38,12 @@ const SINTOMAS = [
 ];
 
 const TESTIMONIALS = [
-  { name: 'Mariana e o Bento (Spitz)', text: 'A Dra. Talita foi impecável na cirurgia ortopédica do Bento. A recuperação foi extremamente rápida e a equipe nos deu total suporte via WhatsApp.', initial: 'M' },
-  { name: 'Lucas e a Nina (Gata)', text: 'O espaço exclusivo para felinos fez toda a diferença. A Nina é muito assustada e pela primeira vez não voltou estressada da internação.', initial: 'L' },
-  { name: 'Fernanda e o Thor (Golden)', text: 'Estrutura de primeiro mundo! Precisamos de uma endoscopia de emergência e eles resolveram tudo no mesmo dia com competência admirável.', initial: 'F' }
+  { name: 'Mariana e Bento (Spitz)', text: 'A Dra. Talita foi impecável na cirurgia ortopédica do Bento. A recuperação na internação foi extremamente rápida e a equipe nos deu total suporte via WhatsApp.', initial: 'M' },
+  { name: 'Lucas e Nina (Gata)', text: 'O espaço exclusivo para felinos fez toda a diferença. A Nina é muito assustada e pela primeira vez não voltou estressada da internação de 2 dias.', initial: 'L' },
+  { name: 'Fernanda e Thor (Golden)', text: 'Estrutura de primeiro mundo! A UTI veterinária foi fundamental para estabilizar o Thor de madrugada. Eles resolveram tudo com competência admirável.', initial: 'F' },
+  { name: 'Roberto e Bella (Pug)', text: 'Atendimento 24h real! Chegamos desesperados às 3 da manhã e a equipe de plantão já estava pronta. Triagem rápida e muito profissionalismo.', initial: 'R' },
+  { name: 'Juliana e Max (Shih Tzu)', text: 'A estrutura do centro cirúrgico me passou muita segurança. Recebi boletins constantes durante toda a internação. Recomendo de olhos fechados!', initial: 'J' },
+  { name: 'Carlos e Mia (Persa)', text: 'Desde a consulta de emergência até a alta, o carinho com a Mia foi excepcional. O monitoramento contínuo na internação salvou a vida dela.', initial: 'C' }
 ];
 
 const PROCESS_STEPS = [
@@ -134,14 +137,16 @@ function App() {
 
   return (
     <div className="app">
-      {/* Top Banner Plantão */}
-      <div className="top-banner">
-        <div className="pulse-dot"></div>
-        <span>PLANTÃO ATIVO: Equipe médica de prontidão neste momento.</span>
-      </div>
+      {/* Header Wrapper */}
+      <header className="sticky-header">
+        {/* Top Banner Plantão */}
+        <div className="top-banner">
+          <div className="pulse-dot"></div>
+          <span>PLANTÃO ATIVO: Equipe médica de prontidão neste momento.</span>
+        </div>
 
-      {/* Navbar with Mobile Menu */}
-      <nav>
+        {/* Navbar with Mobile Menu */}
+        <nav>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 24px' }}>
           <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
             <a href="#">
@@ -180,6 +185,7 @@ function App() {
           <Phone size={20} /> Plantão 24h
         </a>
       </div>
+      </header>
 
       {/* Hero Section Grid */}
       <section className="hero">
@@ -276,7 +282,7 @@ function App() {
           <RevealOnScroll>
             <div style={{ textAlign: 'center', marginTop: '40px' }}>
               <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '16px 32px', fontSize: '1.1rem' }}>
-                <WhatsAppIcon size={20} color="#fff" /> Precisa de Ajuda Agora? Fale com a Triagem
+                <WhatsAppIcon size={20} color="#fff" /> Fale conosco
               </a>
             </div>
           </RevealOnScroll>
@@ -409,24 +415,26 @@ function App() {
             </div>
           </RevealOnScroll>
           
-          <div className="testimonials-grid">
-            {TESTIMONIALS.map((test, idx) => (
-              <RevealOnScroll key={idx}>
-                <div className="testimonial-card">
-                  <div className="stars">
-                    {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#fbbf24" stroke="#fbbf24" />)}
-                  </div>
-                  <p className="testimonial-text">{test.text}</p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">{test.initial}</div>
-                    <div className="author-info">
-                      <h5>{test.name}</h5>
+          <RevealOnScroll>
+            <div className="testimonials-slider-container">
+              <div className="testimonials-track">
+                {[...TESTIMONIALS, ...TESTIMONIALS].map((test, idx) => (
+                  <div className="testimonial-card" key={idx}>
+                    <div className="stars">
+                      {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="#fbbf24" stroke="#fbbf24" />)}
+                    </div>
+                    <p className="testimonial-text">{test.text}</p>
+                    <div className="testimonial-author">
+                      <div className="author-avatar">{test.initial}</div>
+                      <div className="author-info">
+                        <h5>{test.name}</h5>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
+                ))}
+              </div>
+            </div>
+          </RevealOnScroll>
         </div>
       </section>
 
@@ -479,7 +487,7 @@ function App() {
                     <div className="loc-icon"><MapPin size={24} /></div>
                     <div>
                       <h5>Endereço</h5>
-                      <p>Av. Exemplo, 1234 - Bairro<br/>Cidade - Estado, 00000-000</p>
+                      <p>R. Santa Isabel, 68 - Vila Buarque<br/>São Paulo - SP, 01221-010</p>
                     </div>
                   </div>
 
@@ -517,7 +525,7 @@ function App() {
                   <h4 style={{ color: 'var(--primary)', marginBottom: '12px' }}>Ainda tem dúvidas ou é urgente?</h4>
                   <p style={{ fontSize: '0.9rem', marginBottom: '16px', color: 'var(--text-dark)' }}>Fale diretamente com nossa equipe de triagem médica. Estamos prontos para orientar você agora.</p>
                   <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                    <WhatsAppIcon size={20} color="#fff" /> Iniciar Triagem via WhatsApp
+                    <WhatsAppIcon size={20} color="#fff" /> Fale conosco imediatamente!
                   </a>
                 </div>
               </div>
@@ -525,9 +533,10 @@ function App() {
               <div className="map-wrapper">
                 <iframe 
                   title="Google Maps"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9600109968453!2d-46.611090123730594!3d-23.569865661895786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce595c2bd1ce99%3A0xc622606828551a34!2sPetiva%20Centro%20Veterin%C3%A1rio!5e0!3m2!1spt-BR!2sbr!4v1716900000000!5m2!1spt-BR!2sbr" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.720021314836!2d-46.64879812292177!3d-23.5425703609055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a7d1a2d1ad%3A0x1ad66b4dd1480552!2sCentro%20Veterin%C3%A1rio%20Petiva%20%7C%20Cl%C3%ADnica%20Veterin%C3%A1ria%20em%20Vila%20Buarque%20%7C%20Veterin%C3%A1rios%20em%20SP!5e0!3m2!1spt-BR!2sbr!4v1782320459471!5m2!1spt-BR!2sbr" 
                   allowFullScreen="" 
                   loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
                 ></iframe>
               </div>
             </div>
@@ -557,7 +566,7 @@ function App() {
       <div className="floating-whatsapp">
         <div className={`whatsapp-tooltip ${showTooltip ? 'show' : ''}`}>
           <button className="tooltip-close" onClick={() => setShowTooltip(false)}><X size={14} /></button>
-          <p>Ei! Você precisa de ajuda, suporte ou está precisando de uma cirurgia?</p>
+          <p>Ei! Você precisa de ajuda?</p>
         </div>
         <a href={waLink} target="_blank" rel="noreferrer" className="whatsapp-btn">
           <WhatsAppIcon size={32} color="#fff" />
