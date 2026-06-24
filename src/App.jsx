@@ -198,7 +198,7 @@ function App() {
                 <p>Infraestrutura de ponta e equipe especializada de prontidão. Não perca tempo, em casos de emergência cada segundo importa.</p>
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                   <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '20px 40px', fontSize: '1.2rem' }}>
-                    <WhatsAppIcon size={24} color="#fff" /> Fale com a gente agora mesmo
+                    <WhatsAppIcon size={24} color="#fff" /> Fale conosco agora mesmo
                   </a>
                 </div>
               </div>
@@ -525,7 +525,7 @@ function App() {
                   <h4 style={{ color: 'var(--primary)', marginBottom: '12px' }}>Ainda tem dúvidas ou é urgente?</h4>
                   <p style={{ fontSize: '0.9rem', marginBottom: '16px', color: 'var(--text-dark)' }}>Fale diretamente com nossa equipe de triagem médica. Estamos prontos para orientar você agora.</p>
                   <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                    <WhatsAppIcon size={20} color="#fff" /> Fale com a gente agora mesmo!
+                    <WhatsAppIcon size={20} color="#fff" /> Fale conosco agora mesmo!
                   </a>
                 </div>
               </div>
