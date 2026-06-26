@@ -25,7 +25,7 @@ const FacebookIcon = ({ size = 24, color = "currentColor" }) => (
 
 const FEATURES = [
   { icon: <Clock size={32} />, title: 'Atendimento 24h', desc: 'Prontidão total a qualquer hora do dia ou da noite para o seu pet.' },
-  { icon: <HeartPulse size={32} />, title: 'UTI Veterinária', desc: 'Equipamentos de monitoramento contínuo para suporte avançado à vida.' },
+  { icon: <HeartPulse size={32} />, title: 'Centro Especializado', desc: 'Equipamentos de monitoramento contínuo para suporte avançado à vida.' },
   { icon: <ShieldCheck size={32} />, title: 'Segurança Total', desc: 'Ambientes separados e climatizados para cães e gatos, minimizando estresse.' },
   { icon: <Stethoscope size={32} />, title: 'Especialistas de Plantão', desc: 'Equipe veterinária altamente qualificada sempre presente no local.' }
 ];
@@ -194,8 +194,8 @@ function App() {
             <div className="hero-grid">
               <div className="hero-content">
                 <div className="hero-badge">🚨 Serviço de Urgência & Emergência</div>
-                <h1>Internação<br />Veterinária 24h:<br />Cuidado&nbsp;<span>Especializado</span><br />para o seu Pet.</h1>
-                <p>Infraestrutura de ponta e equipe especializada de prontidão. Não perca tempo, em casos de emergência cada segundo importa.</p>
+                <h1>Internação<br />Veterinária 24h:<br />Cuidado&nbsp;<span>Especializado</span><br />para o seu Pet</h1>
+                <p>Infraestrutura de ponta e equipe especializada de prontidão. Não perca tempo: em casos de emergência, cada segundo importa.</p>
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                   <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '20px 40px', fontSize: '1.2rem' }}>
                     <WhatsAppIcon size={24} color="#fff" /> Fale conosco agora mesmo
@@ -215,7 +215,7 @@ function App() {
         <div className="container">
           <RevealOnScroll>
             <div className="section-header">
-              <h2>Quando procurar o <span>Pronto-Socorro?</span></h2>
+              <h2>Quando procurar o <span>Pronto Atendimento?</span></h2>
               <p>Fique atento aos sinais. Um atendimento rápido salva a vida do seu pet.</p>
             </div>
           </RevealOnScroll>
@@ -551,7 +551,7 @@ function App() {
             <RevealOnScroll>
               <img src="/assets/logo_petiva/Logo-petiva-transparente.png" alt="Petiva" className="footer-logo" onError={(e) => {e.target.style.display='none'; e.target.parentElement.insertAdjacentHTML('afterbegin', '<h3>petiva</h3>');}} />
               <p style={{ opacity: 0.8, maxWidth: '500px', margin: '0 auto' }}>
-                Centro de cuidado intensivo e especializado. Estrutura hospitalar avançada com atendimento humanizado para o seu pet.
+                Centro de cuidado especializado. Estrutura hospitalar avançada com atendimento humanizado para o seu pet.
               </p>
             </RevealOnScroll>
           </div>
