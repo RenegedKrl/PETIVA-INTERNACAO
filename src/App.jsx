@@ -194,7 +194,7 @@ function App() {
             <div className="hero-grid">
               <div className="hero-content">
                 <div className="hero-badge">🚨 Serviço de Urgência & Emergência</div>
-                <h1>Internação Veterinária 24h: Cuidado <span>Intensivo</span> para o seu Pet.</h1>
+                <h1>Internação<br />Veterinária 24h:<br />Cuidado&nbsp;<span>Especializado</span><br />para o seu Pet.</h1>
                 <p>Infraestrutura de ponta e equipe especializada de prontidão. Não perca tempo, em casos de emergência cada segundo importa.</p>
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                   <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '20px 40px', fontSize: '1.2rem' }}>
