@@ -61,20 +61,17 @@ const FAQS = [
 
 const ESTRUTURA_IMAGES = [
   'Centro-cirurgico-scaled.jpeg',
-  'Entrada-bloco-cirurgico-scaled.jpg',
-  'IMG_7843-1-scaled.jpg',
-  'IMG_7845-scaled.jpg',
+  'IMG_7868-scaled.jpg',
   'IMG_7865-1-scaled.jpg',
+  'IMG_7845-scaled.jpg',
+  'IMG_7843-1-scaled.jpg',
   'Paramentacao-1-scaled.jpg',
-  'CLFEDB~1.JPG', 
-  'CLINIC~1.JPG', 
-  'CLINIC~2.JPG', 
-  'CLINIC~3.JPG', 
-  'CLINIC~4.JPG',
-  'IMG_7868-scaled.jpg', 
-  'PROBLE~1.JPG', 
-  'WhatsApp-Image-2025-11-03-at-15.23.11-3-scaled.jpeg', 
-  'cromoterapia-para-caes-e-gatos-tratamento-saude-animal-veterinaria.png'
+  'CLINIC~2.JPG',
+  'CLINIC~1.JPG',
+  'CLINIC~3.JPG',
+  'CLFEDB~1.JPG',
+  'PROBLE~1.JPG',
+  'CLINIC~4.JPG'
 ];
 
 const RevealOnScroll = ({ children }) => {
