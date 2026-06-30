@@ -476,8 +476,8 @@ function App() {
           <RevealOnScroll>
             <div className="location-grid">
               <div className="location-info">
-                <h2>Venha nos visitar</h2>
-                <p>Nossa estrutura está preparada 24 horas por dia para receber o seu pet.</p>
+                <h2>Entre em contato rápido</h2>
+                <p>Nossa estrutura está preparada 24 horas por dia para receber o seu pet em casos de internação ou emergência.</p>
 
                 <div className="location-cards">
                   <div className="loc-card">
